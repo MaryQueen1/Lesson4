@@ -6,29 +6,18 @@
 Console.Clear();
 Console.WriteLine("Задча 27.");
 
-int[] CreateMassiv()
-{
-    Console.WriteLine("Введите число: ");
-    string? value = Console.ReadLine();
-    string[] V = value.Split("");
-    int[] Value = new int[V.Length];
-    for(int i = 0; i < V.Length; i++)
-    {
-        Value[i] = Convert.ToInt32(V[i]);
-    }
-    return Value;
-}
+Console.WriteLine("Введите число: ");
+string? value = Console.ReadLine();
 
-int[] Number = CreateMassiv();
-
-void Summ(int[] N)
+void Summ(string N)
 {
+    int result = 0;
+
     for(int i = 0; i < N.Length; i++)
     {
-        int result = 0;
         result = result + N[i];
-        Console.WriteLine($"сумма {Number} = {N[i]}");
+        Console.WriteLine($"{result} ");
     }
 }
 
-Summ(Number);
+Summ(value);
